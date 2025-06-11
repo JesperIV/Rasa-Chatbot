@@ -1,0 +1,14 @@
+tracker_store:
+  type: SQL
+  dialect: postgresql
+  url: ${POSTGRES_HOST}
+  db: ${POSTGRES_DB}
+  username: ${POSTGRES_USER}
+  password: ${POSTGRES_PASSWORD}
+  port: ${POSTGRES_PORT}
+
+rest:
+  channel_class: rasa_chatbot.custom_channels.message_tracking_channel.MessageTrackingOutputChannel
+
+action_endpoint:
+  url: ${RASA_SDK_URL}

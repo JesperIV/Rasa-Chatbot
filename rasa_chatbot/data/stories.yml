@@ -1,0 +1,167 @@
+version: "3.1"
+
+stories:
+  - story: support_zzp
+    steps:
+      - intent: support_zzp
+      - action: utter_support_zzp
+
+  - story: memberships
+    steps:
+      - intent: memberships
+      - action: utter_memberships
+
+  - story: updates
+    steps:
+      - intent: updates
+      - action: utter_updates
+
+  - story: wkkgz_compliance
+    steps:
+      - intent: wkkgz_compliance
+      - action: utter_wkkgz_compliance
+
+  - story: sign_up
+    steps:
+      - intent: sign_up
+      - action: utter_sign_up
+
+  - story: set_start_date
+    steps:
+      - intent: set_start_date
+      - action: utter_set_start_date
+
+  - story: no_confirmation_email
+    steps:
+      - intent: no_confirmation_email
+      - action: utter_no_confirmation_email
+
+  - story: post_sign_up
+    steps:
+      - intent: post_sign_up
+      - action: utter_post_sign_up
+
+  - story: annual_renewal
+    steps:
+      - intent: annual_renewal
+      - action: utter_annual_renewal
+
+  - story: free_vog
+    steps:
+      - intent: free_vog
+      - action: utter_free_vog
+
+  - story: upgrade_downgrade
+    steps:
+      - intent: upgrade_downgrade
+      - action: utter_upgrade_downgrade
+
+  - story: second_vog
+    steps:
+      - intent: second_vog
+      - action: utter_second_vog
+
+  - story: automatic_debit
+    steps:
+      - intent: automatic_debit
+      - action: utter_automatic_debit
+
+  - story: invoice
+    steps:
+      - intent: invoice
+      - action: utter_invoice
+
+  - story: installment_payment
+    steps:
+      - intent: installment_payment
+      - action: utter_installment_payment
+
+  - story: my_solo
+    steps:
+      - intent: my_solo
+      - action: utter_my_solo
+
+  - story: no_login_details
+    steps:
+      - intent: no_login_details
+      - action: utter_no_login_details
+
+  - story: membership_certificate
+    steps:
+      - intent: membership_certificate
+      - action: utter_membership_certificate
+
+  - story: update_details
+    steps:
+      - intent: update_details
+      - action: utter_update_details
+
+  - story: cancel_membership
+    steps:
+      - intent: cancel_membership
+      - action: utter_cancel_membership
+
+  - story: best_complaints_portal
+    steps:
+      - intent: best_complaints_portal
+      - action: utter_best_complaints_portal
+
+  - story: vog_required
+    steps:
+      - intent: vog_required
+      - action: utter_vog_required
+
+  - story: free_vog
+    steps:
+      - intent: free_vog
+      - action: utter_free_vog
+
+  - story: wtza_vs_wkkgz
+    steps:
+      - intent: wtza_vs_wkkgz
+      - action: utter_wtza_vs_wkkgz
+
+  - story: wtza_subscription
+    steps:
+      - intent: wtza_subscription
+      - action: utter_wtza_subscription
+
+  - story: wtza_info
+    steps:
+      - intent: wtza_info
+      - action: utter_wtza_info
+
+  - story: wtza_reporting
+    steps:
+      - intent: wtza_reporting
+      - action: utter_wtza_reporting
+
+  - story: bav_insurance
+    steps:
+      - intent: bav_insurance
+      - action: utter_bav_insurance
+
+  - story: insurance_needed
+    steps:
+      - intent: insurance_needed
+      - action: utter_insurance_needed
+
+  - story: cheapest_subscription
+    steps:
+      - intent: cheapest_subscription
+      - action: utter_cheapest_subscription
+  
+  - story: choice_help
+    steps:
+      - intent: choice_help
+      - action: utter_choice_help
+  
+  - story: best_option
+    steps:
+      - intent: best_option
+      - action: utter_best_option
+  
+  - story: portfolio
+    steps:
+      - intent: portfolio
+      - action: utter_portfolio

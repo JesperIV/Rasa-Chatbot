@@ -1,0 +1,268 @@
+version: "3.1"
+
+intents:
+  - nlu_fallback        # IMPORTANT! Needed for a fallback response
+  - greet
+  - thank
+  - bye
+  - identify
+  - correction
+  - request_support
+  - support_zzp
+  - memberships
+  - updates
+  - wkkgz_compliance
+  - sign_up
+  - set_start_date
+  - no_confirmation_email
+  - post_sign_up
+  - annual_renewal
+  - free_vog
+  - upgrade_downgrade
+  - second_vog
+  - automatic_debit
+  - invoice
+  - installment_payment
+  - my_solo
+  - no_login_details
+  - membership_certificate
+  - update_details
+  - cancel_membership
+  - best_complaints_portal
+  - vog_required
+  - wtza_vs_wkkgz
+  - wtza_subscription
+  - wtza_info
+  - wtza_reporting
+  - bav_insurance
+  - insurance_needed
+  - cheapest_subscription
+  - choice_help
+  - best_option
+  - portfolio
+
+responses:
+  utter_fallback:
+    - text: "Sorry, ik begrijp je niet helemaal. Kun je je vraag anders stellen? Gebruik desnoods steekwoorden."
+
+  utter_greet:
+    - text: "Hallo! Waarmee kan ik je helpen?"
+
+  utter_thank:
+    - text: "Graag gedaan! Als je nog vragen hebt, stel ze gerust."
+
+  utter_identify:
+    - text: "Ik ben een chatbot, geen echt persoon. Ik ben er om je te helpen met vragen over SoloPartners."
+
+  utter_correction:
+    - text: "Sorry! Zou je je bericht anders kunnen formuleren? Dan probeer ik je zo goed mogelijk te helpen!"
+
+  utter_request_support:
+    - text: "Ik begrijp dat u contact wilt opnemen met onze klantenservice. U kunt ons bereiken via info@solopartners.nl of bel 085 20 10 140."
+
+  utter_bye:
+    - text: "Tot ziens!"
+
+  utter_support_zzp:
+    - text: "SoloPartners ondersteunt zzp’ers in de zorg door hen te helpen voldoen aan wet- en regelgeving en door actuele en begrijpelijke voorlichting en informatie te verstrekken."
+  
+  utter_memberships:
+    - text: "SoloPartners biedt de volgende lidmaatschappen aan: SoloPlus (€75,- per jaar) en SoloCompleet (€160,- per jaar)."
+  
+  utter_updates:
+    - text: "Blijf op de hoogte van ontwikkelingen voor zzp’ers door je aan te melden voor onze nieuwsbrief en regelmatig onze website te bezoeken."
+  
+  utter_wkkgz_compliance:
+    - text: "Met zowel het SoloPlus- als het SoloCompleet-abonnement beschik je over een erkende klachtenregeling en aansluiting bij een onafhankelijke geschillencommissie. De Wkkgz eist echter meer van zorg-zzp’ers. 
+            Kies je voor het SoloCompleet-abonnement? Dan beschik je over alle tools om eenvoudig aan de Wkkgz te kunnen voldoen."
+  
+  utter_sign_up:
+    - text: "Je kunt je aanmelden bij SoloPartners via onze website.
+            Kies eerst voor een abonnement (SoloPlus of SoloCompleet). 
+            Vul de gegevens in op het aanmeldformulier en voltooi de aanmelding. Na de controle van de gegevens  ontvang je een factuur. Zodra deze is betaald, krijg je toegang tot je persoonlijke MijnSolo-omgeving en ontvang je het lidmaatschapscertificaat. Hiermee toon je aan dat je beschikt over een klachtenregeling en bent aangesloten bij een erkende geschilleninstantie."
+  
+  utter_set_start_date:
+    - text: "Het is niet mogelijk om een specifieke startdatum in te stellen. Activeer je lidmaatschap dus op/rond de gewenste datum om ervoor te zorgen dat het aansluit bij je planning."
+  
+  utter_no_confirmation_email:
+    - text: "Controleer je spamfolder. Als je nog steeds geen bevestigingsmail ontvangt, neem dan contact op met onze klantenservice via info@solopartners.nl of bel 085 20 10 140."
+  
+  utter_post_sign_up:
+    - text: "Na je aanmelding ontvang je een bevestigingsmail.
+  
+            Voordat je gebruik kunt maken van de voordelen van het gekozen abonnement, doorlopen we eerst de volgende stappen:
+            
+
+            **1:** We controlleren je gegevens.
+            
+
+            **2:** We koppelen de gegevens aan een Kamer van Koophandel inschrijving.Als we de gegevens niet kunnen koppelen aan een KvK-nummer, kunnen we de aanmelding niet direct verwerken. In dat geval neemt onze klantenservice op korte termijn contact met je op.
+            
+
+            **3:** Je ontvangt de factuur per mail.
+            
+
+            **4:** Na betaling ontvang je de inloggegevens voor jouw persoonlijke MijnSolo-omgeving en kun je gebruikmaken van alle voordelen van het afgesloten abonnement.
+            
+
+            Bovendien ontvang je het certificaat waarmee je kunt aantonen dat je beschikt over een erkende klachtenregeling en bent aangesloten bij een erkende geschilleninstantie. Je kunt het certificaat ook zelf downloaden in jouw persoonlike MijnSolo-omgeving."
+    
+  utter_annual_renewal:
+    - text: "Je hoeft je niet ieder jaar opnieuw aan te melden. Het lidmaatschap wordt automatisch verlengd."
+  
+  utter_upgrade_downgrade:
+    - text: "Je kunt je lidmaatschap upgraden in het MijnSolo-portaal. 
+            Downgraden kan aan het einde van je lidmaatschapsjaar. Neem hiervoor contact op met de klantenservice (t. 085 20 10 140)"
+  
+  utter_second_vog:
+    - text: "SoloPartners vergoedt, binnen het SoloCompleet-pakket, eenmaal per lidmaatschapsjaar de kosten van de VOG. De kosten voor een tweede en volgende aanvraag komen voor eigen rekening."
+  
+  utter_automatic_debit:
+    - text: "SoloPartners werkt niet met automatische incasso’s. Dit geeft jou, als zelfstandig ondernemer, volledige controle over je betalingen."
+  
+  utter_invoice:
+    - text: "Je kunt al je facturen terugvinden in je persoonlijke MijnSolo-omgeving door deze stappen te volgen:
+  
+
+            **1:** Klik rechtsboven op ‘MijnSolo’.
+
+
+            **2:** Vul je lidnummer of e-mailadres en wachtwoord in om in te loggen.
+
+
+            **3:** In je persoonlijke omgeving klik je op ‘Mijn Solo’.
+
+
+            **4:** Klik op ‘Facturen’ om een overzicht van je betaalde facturen te zien.
+
+
+            **5:** Klik op de gewenste factuur om de specificatie te bekijken. Klik vervolgens linksonder op ‘Downloaden’ om de factuur als PDF op je computer te bewaren.
+  
+
+            **Let op:** Heb je een ‘bewijs van lidmaatschap’ nodig? Hiervoor heb je het certificaat nodig, niet de factuur."
+
+  utter_installment_payment:
+    - text: "Als lid van SoloPartners beschik je over een klachtenregeling en ben je aangesloten bij een erkende geschilleninstantie. 
+            De jaarlijkse kosten hiervoor moeten vooraf volledig worden voldaan. Het is niet mogelijk om in termijnen te betalen."
+  
+  utter_my_solo:
+    - text: "‘MijnSolo’ is het persoonlijke ledenportaal van SoloPartners."
+  
+  utter_no_login_details:
+    - text: "Neem contact op met onze klantenservice als je geen inloggegevens hebt ontvangen."
+  
+  utter_membership_certificate:
+    - text: "Je kunt het bewijs van lidmaatschap (certificaat) vinden in je MijnSolo-omgeving. Volg deze stappen om het certificaat te downloaden:
+  
+
+            **1:** Ga naar jouw MijnSolo-omgeving (rechtsboven).
+
+
+            **2:** Log in met je lidmaatschapsnummer of e-mailadres en wachtwoord.
+
+
+            **3:** In het openingsscherm zie je bovenaan, naast het SoloPartners-logo, de optie ‘Download certificaat’. Klik hierop. Je kunt ook de oranje knop ‘Download certificaat’ onder je naam in het blauwe blok gebruiken.
+
+
+            **4:** Het certificaat wordt automatisch gedownload en verschijnt als PDF in de downloadmap van je computer."
+  
+  utter_update_details:
+    - text: "Je kunt je (adres)gegevens wijzigen in je MijnSolo-omgeving. Volg hiervoor de volgende stappen:
+  
+            
+            **1:** Ga naar jouw MijnSolo-omgeving (rechtsboven).
+
+
+            **2:** Log in met je lidmaatschapsnummer of e-mailadres en wachtwoord.
+
+
+            **3:** In je persoonlijke omgeving klik je op ‘Mijn Solo’ en ga je naar ‘Mijn gegevens’;.
+
+
+            **4:** Klik op de knop ‘Gegevens wijzigen’ en voer de gewenste wijzigingen door.
+
+
+            **5:** Vergeet niet om op ‘Opslaan’ te klikken om de wijzigingen te bevestigen.
+  
+
+            Heb je problemen met het wijzigen van je gegevens? Neem dan contact op met onze klantenservice: 085 – 20 10 140."
+  
+  utter_cancel_membership:
+    - text: "Je kunt je lidmaatschap beëindigen door dit, minimaal één maand voor het einde van je lidmaatschapsperiode, aan ons door te geven. Dit kan op een van de volgende manieren:
+  
+
+            **1:** Meld je af in je MijnSolo-omgeving Door in te loggen met je lidmaatschapsnummer of mailadres. Ga vanuit het openingsscherm naar 'Mijn Solo' en klik onder het kopje 'Lidmaatschap' op het knopje 'Lidmaatschap opzeggen'.
+            Hier vind je de datum tot wanneer je gebruik kunt maken van je lidmaatschap. Weet u zeker dat u het lidmaatschap wil beëindigen? Klik dan op 'Ja, stop lidmaatschap'.
+
+
+            **2:** Stuur een mail met de opzegging naar naar info@solopartners.nl.
+
+            
+            **3:** Stuur een brief met de opzegging per post naar: SoloPartners, Ridderhof 67, 5341HS in Oss.
+  
+
+            **Let op!** Restitutie (geheel of gedeeltelijk) is niet mogelijk; dit heeft te maken met services en diensten die wij inkopen bij derden. Meer informatie? Bekijk artikel 5 in onze algemene voorwaarden."
+
+  utter_best_complaints_portal:
+    - text: "Er zijn verschillende aanbieder van een klachtenregeling in de zorg: https://www.solopartners.nl/klachtenregeling-zzp-zorg/
+            Als zzp’er in de zorg moet je, om te voldoen aan de Wkkgz, beschikken over een externe klachtenregeling. Om volledig te voldoen aan de Wkkgz is een klachtenregeling alleen niet voldoende. SoloPartners biedt daarom een volledig abonnement aan (SoloCompleet) zodat je alle tools in handen hebt om eenvoudig te kunnen voldoen aan de eisen die de Wkgz stelt."
+  
+  utter_vog_required:
+    - text: "Als zorg-zzp’er heb je een Verklaring Omtrent Gedrag (VOG) nodig. Bijvoorbeeld voor opdrachtgevers, verzekeringen & voor wet- en regelgeving."
+  
+  utter_free_vog:
+    - text: "Heb je een SoloCompleet-abonnement? Dan kun je, per lidmaatschapsjaar, gratis een VOG aanvragen."
+  
+  utter_wtza_vs_wkkgz:
+    - text: "De Wtza (Wet toetreding zorgaanbieders) richt zich in grote lijnen op de meldplicht en registratie van zorgaanbieders bij het CIBG.
+
+            De Wkkgz (Wet kwaliteit, klachten en geschillen zorg) right zich in grote lijnen op de kwaliteit van zorg, klachtenafhandeling en veiligheid van cliënten."
+  
+  utter_wtza_subscription:
+    - text: "Een abonnement op de Wkkgz bestaat niet. De Wkkgz (Wet kwaliteit, klachten en geschillen zorg) is namelijk een wet en daar kun je je niet kunt op abonneren. Wel moeten veel zorgverleners voldoen aan de eisen van de Wkkgz. SoloPartners helpt je hier graag bij."
+  
+  utter_wtza_info:
+    - text: "Wtza staat voor de Wet toetreding zorgaanbieders en is in 2022 ingevoerd. Het verplicht nieuwe en bestaande zorgaanbieders om zich, voordat zij zorg mogen verlenen, te melden bij het CIBG. Drie maanden voordat je start als zorgaanbieder kun je de melding al in orde maken.
+  
+            
+            Door de meldplicht kan de Inspectie Gezondheidszorg en Jeugd (IGJ) beter toezicht houden. Bovendien worden nieuwe zorgaanbieders zich bewust van de (kwaliteits)eisen die aan hen worden gesteld. En aan hun verantwoordelijkheid om goede zorg te leveren. Kortom, de wet zorgt voor meer transparantie en kwaliteit in de zorgsector.
+
+            Verleen je uitsluitend zorg vanuit de Wmo? Dan is de Wtza niet op jou van toepassing en hoef je je dus niet te melden bij het CIBG."
+
+  utter_wtza_reporting:
+    - text: "Wil je weten of je onder de meldplicht valt? Doe dan de 'meldplicht-check' op https://www.toetredingzorgaanbieders.nl/melden/meldplichtcheck.
+            
+            Verleen je zorg die valt onder de Wkkgz (Wet kwaliteit, klachten en geschillen zorg). Dan heb je doorgaans een Wtza-meldplicht (Wet toetreding zorgaanbieders).
+            
+            Lever je uitsluitend Wmo-zorg (Wet maatschappelijke ondersteuning)? Dan ben je niet meldplichtig."
+  
+  utter_bav_insurance:
+    - text: "Een beroepsaansprakelijkheidsverzekering is niet verplicht voor een zorg-zzp'er, maar wel sterk aan te raden aangezien het financiële risico bij klachten of fouten aanzienlijk kan zijn."
+  
+  utter_insurance_needed:
+    - text: "Als zzp’er in de zorg loop je risico’s; dat hoort bij het zelfstandig ondernemerschap. Niet ieder risico is te voorkomen of te beperken en sommige gevolgen zijn niet zelf te dragen. Voor het afdekken van  risico’s kun je je verzekeren. Zorg dat je duidelijk voor ogen hebt welke risico’s je loopt; welke risico’s wil/kun je zelf dragen en welke risico’s wil je afdekken?
+  
+  
+            Meer weten? Kijk dan hier: https://nieuw.solopartners.nl/kennisbank/welke-verzekeringen-heb-ik-nodig-als-zorgprofessional/"
+  
+  utter_cheapest_subscription:
+    - text: "Het goedkoopste abonnement is [SoloPlus](https://nieuw.solopartners.nl/abonnementen/solo-plus/). Dit kost €75,- per jaar.
+    
+
+            [SoloKennis](https://nieuw.solopartners.nl/abonnementen/solo-kennis/) is onze gratis optie, bij dit abonnement krijgt u toegang tot MijnSolo en andere tools die u kunnen helpen als zzp'er in de zorg."
+
+  utter_choice_help:
+    - text: "Als u niet weet welk abonnement het beste bij u past kunt u gebruik maken van onze keuzehulp. Deze keuzehulp helpt u bij het maken van de juiste keuze door u een aantal vragen te stellen. U kunt de keuzehulp vinden op onze website onder het kopje '[Abonnementen](https://nieuw.solopartners.nl/abonnementen/)'."
+
+  utter_best_option:
+    - text: "Ons meest uitgebreide abonnement is SoloCompleet. Dit abonnement biedt alle voordelen en is het meest geschikt voor zzp'ers in de zorg. 
+            
+            Het kost €160,- per jaar en biedt toegang tot alle tools die je nodig hebt.
+            
+            
+            Meer lezen? Bekijk ons SoloCompleet abonnement [hier](https://nieuw.solopartners.nl/abonnementen/solo-compleet/)!"
+
+  utter_portfolio:
+    - text: "U krijgt toegang tot uw persoonlijke online portfolio als u een SoloCompleet abonnement heeft.
+    
+            Het portfolio kunt u vinden binnen uw MijnSolo-omgeving."

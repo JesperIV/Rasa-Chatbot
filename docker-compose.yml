@@ -1,0 +1,73 @@
+services:
+  postgres:
+    image: postgres
+    container_name: rasa-postgres
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rasa:
+    build: ./rasa_chatbot
+    container_name: rasa-server
+    depends_on:
+      - postgres
+      - action-server
+    ports:
+      - "0.0.0.0:5005:5005"
+    command: ["/bin/sh", "/app/entrypoint.sh"]
+    volumes:
+      - ./rasa_chatbot:/app
+    env_file:
+      - .env
+    environment:
+      SQLALCHEMY_WARN_20: "1"
+    user: "0:0"
+
+  frontend:
+    build: .
+    container_name: vue-app
+    ports:
+      - "4173:4173"
+    depends_on:
+      - rasa
+
+  admin_api:
+    build:
+      context: ./apis
+      dockerfile: admin_api/Dockerfile
+    container_name: admin-api
+    ports:
+      - "5001:5005"
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+  
+  user_api:
+    build:
+      context: ./apis
+      dockerfile: user_api/Dockerfile
+    container_name: user-api
+    ports:
+      - "5003:5003"
+    depends_on:
+      - rasa
+      - postgres
+    env_file:
+      - .env
+
+  action-server:
+    image: rasa/rasa-sdk:latest
+    container_name: action-server
+    volumes:
+      - ./rasa_chatbot/actions:/app/actions
+    ports:
+      - "5055:5055"
+    command: start --actions actions
+
+volumes:
+  postgres_data:

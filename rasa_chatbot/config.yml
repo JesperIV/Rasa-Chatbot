@@ -1,0 +1,42 @@
+recipe: default.v1
+
+assistant_id: default_spacy_bot
+
+language: nl
+
+pipeline:
+  - name: custom_components.spell_checker.SpellChecker  # Custom component for spell checking
+  - name: "SpacyNLP"
+    model: "nl_core_news_lg"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "RegexFeaturizer"
+  - name: "LexicalSyntacticFeaturizer"
+  - name: "CountVectorsFeaturizer"  # First instance of CountVectorsFeaturizer, character level
+    analyzer: "char_wb"
+    min_ngram: 3
+    max_ngram: 4
+  - name: "CountVectorsFeaturizer"  # Second instance of CountVectorsFeaturizer, word level
+  - name: "DIETClassifier"
+    epochs: 100
+    entity_recognition: true
+    constrain_similarities: true
+    # tensorboard_log_directory: "./logs" # Uncomment this to enable DIETClassifier logs in rasa_chatbot/logs/train
+  - name: "EntitySynonymMapper"
+  - name: "ResponseSelector"
+  - name: "FallbackClassifier"
+    threshold: 0.4
+
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100

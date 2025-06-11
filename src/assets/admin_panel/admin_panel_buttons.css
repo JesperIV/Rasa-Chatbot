@@ -1,0 +1,70 @@
+.btn {  /* Universal for buttons */
+    width: 100%;
+    border: none;
+    color: white;
+    background-color: rgb(240, 240, 240);
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.tab {
+    border-radius: 4px 4px 0 0;
+    width: 10%;
+}
+
+.btn.scan {
+    color: black;
+    margin: 5px;
+}
+
+.btn.scan:hover {
+    background-color: gray;
+}
+
+.btn.scan:disabled {
+    background-color: #c0c0c0;
+    color: #6b6b6b;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none; 
+}
+
+.btn.read {
+    color: black;
+}
+
+.btn.read:hover {
+    background-color: rgb(224, 224, 224);
+    color: lightslategray;
+}
+
+.btn.delete {
+    background: red;
+}
+
+.btn.delete:hover {
+    background-color: rgb(224, 0, 0);
+    color: lightpink;
+}
+
+.btn.edit {
+    background: blue;
+}
+
+.btn.edit:hover {
+    background-color: rgb(0, 0, 224);
+    color: lightblue;
+}
+
+.btn.save {
+    background: green;
+}
+
+.btn.save:hover {
+    background-color: seagreen;
+    color: lightgreen;
+}

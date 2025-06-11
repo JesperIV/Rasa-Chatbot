@@ -1,0 +1,2 @@
+#   Make sure that .sh files are fetched with LF line endings, not CRLF
+*.sh text eol=lf

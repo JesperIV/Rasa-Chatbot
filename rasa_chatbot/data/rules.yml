@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+  - rule: Handle fallback when confidence is low
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
+
+  - rule: greet_rule
+    steps:
+    - intent: greet
+    - action: utter_greet
+  
+  - rule: thank_rule
+    steps:
+    - intent: thank
+    - action: utter_thank
+  
+  - rule: identify_rule
+    steps:
+    - intent: identify
+    - action: utter_identify
+
+  - rule: correction_rule
+    steps:
+    - intent: correction
+    - action: utter_correction
+  
+  - rule: request_support_rule
+    steps:
+    - intent: request_support
+    - action: utter_request_support
+
+  - rule: bye_rule
+    steps:
+    - intent: bye
+    - action: utter_bye

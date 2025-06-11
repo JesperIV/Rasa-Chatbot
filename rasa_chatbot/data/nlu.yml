@@ -1,0 +1,762 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hallo
+      - hoi
+      - hey
+      - goedendag
+      - goedenmorgen
+      - goedenavond
+      - goedenmiddag
+      - goede avond
+      - goede morgen
+      - goede middag
+      - hi
+      - hello
+      - goeie dag
+      - goeie morgen
+      - goeie avond
+      - goeie middag
+      - hey daar
+      - hoe gaat het
+      - hoe is het
+
+  - intent: thank
+    examples: |
+      - bedankt voor je hulp
+      - bedankt voor de informatie
+      - bedankt voor je tijd
+      - bedankt
+      - dankjewel
+      - dank je wel
+      - dankuwel
+      - dank je
+      - dank u
+      - thanks
+      - thank you
+      - dank
+      - top
+      - super
+      - geweldig
+      - fantastisch
+      - prima
+      - uitstekend
+      - perfect
+      - ik snap het
+      - ik begrijp het
+      - ik snap het nu
+      - dat is juist
+      - dat klopt
+      - ik begrijp het
+      - goed gedaan
+      - duidelijk
+      - komt goed
+
+  - intent: request_support
+    examples: |
+      - ik wil een medewerker spreken
+      - ik wil met iemand praten
+      - ik wil met een medewerker spreken
+      - ik wil met een echt persoon praten
+      - ik wil niet met een chatbot praten
+      - ik wil klantenserivce spreken
+      - ik wil iemand van de klantenservice spreken
+      - hoe bereik ik de klantenservice
+      - ik wil contact met de klantenservice
+      - ik wil contact met een medewerker
+      - ik wil niet met een robot praten
+      - verbind me door met een medewerker
+      - verbind me door met een echt persoon
+      - ik wil een medewerker
+      - ik wil een echt persoon
+      - ik wil een mens
+
+  - intent: bye
+    examples: |
+      - nog een fijne dag gewenst
+      - fijne dag
+      - gedag
+      - tot ziens
+      - tot de volgende keer
+      - tot later
+      - tot gauw
+      - tot snel
+      - doei
+      - groetjes
+      - dag
+      - vaarwel
+      - bye
+      - goodbye
+
+  - intent: identify
+    examples: |
+      - wie ben jij
+      - wat is jouw naam
+      - hoe heet jij
+      - met wie spreek ik
+      - wie ben je
+      - wie is dit
+      - wat ben je
+      - is dit een persoon
+      - praat ik met een medewerker
+      - ben jij een medewerker
+      - ben jij een persoon
+      - ben jij een chatbot
+      - ben jij een robot
+      - ben jij een mens
+      - ben jij een persoon of een robot
+      - is dit een chatbot
+      - is dit een robot
+      - is dit een mens
+      - wat is uw naam
+
+  - intent: correction
+    examples: |
+      - dat is niet wat ik bedoelde
+      - dat klopt niet
+      - waar heb je het over
+      - dat is niet waar ik het over heb
+      - dat is niet wat ik zei
+      - ik bedoel dat niet
+      - ik heb het over iets anders
+      - dat is fout
+      - je snapt het niet
+      - je begrijpt me niet
+      - je begrijpt me verkeerd
+      - snap je het niet
+      - begrijp je het niet
+      - dat bedoelde ik niet
+      - dat is niet wat ik vroeg
+      - dat is niet wat ik bedoel
+      - dat is niet wat ik wil weten
+
+  - intent: support_zzp
+    examples: |
+      - hoe ondersteunt solopartners zzpers in de zorg
+      - wat doet solopartners voor zzpers in de zorg
+      - hoe helpt solopartners zzpers in de zorg
+      - wat is de rol van solopartners voor zzpers in de zorg
+      - hoe helpen jullie zzpers
+      - welke diensten bieden jullie
+      - wat biedt solopartners mij
+      - wat heeft solopartners mij te bieden
+      - wat doet solopartners
+      - wat doen jullie
+      - hoe helpen jullie
+      - wat heb ik aan jullie
+      - wat is jullie rol
+      - wat heb ik aan solopartners
+      - wat is solopartners
+      - wat voor bedrijf is dit
+      - wat kunnen jullie voor mij betekenen
+      - wat doen jullie voor mij
+  
+  - intent: memberships
+    examples: |
+      - welke lidmaatschappen biedt solopartners aan
+      - wat zijn de lidmaatschappen van solopartners
+      - welke soorten lidmaatschappen heeft solopartners
+      - welke abonnementen heeft solopartners
+      - welke lidmaatschapsopties zijn er
+      - welke abonnementsopties zijn er
+      - kun je de verschillende lidmaatschappen uitleggen
+      - kun je de verschillen tussen de lidmaatschappen uitleggen
+      - kun je de verschillende abonnementen toelichten
+      - welke lidmaatschappen zijn er
+      - wat zijn jullie opties
+      - wat bieden jullie aan
+      - wat zijn de mogelijkheden
+      - lidmaatschap
+      - abonnement
+      - lidmaatschappen
+      - abonnementen
+      - lidmaatschapsopties
+      - abonnementsopties
+  
+  - intent: updates
+    examples: |
+      - hoe blijf je op de hoogte van ontwikkelingen voor zzpers
+      - hoe blijf ik op de hoogte van nieuws voor zzpers
+      - hoe blijf je op de hoogte van ontwikkelingen voor zzpers
+      - hoe blijf ik op de hoogte van nieuws voor zzpers
+      - hoe blijf ik op de hoogte van ontwikkelingen in de zorg
+      - hoe blijf ik op de hoogte van ontwikkelingen
+      - hoe blijf ik op de hoogte van nieuws
+      - hoe blijf ik op de hoogte
+      - ik wil op de hoogte blijven
+      - hou me op de hoogte
+      - hebben jullie een nieuwsbrief
+      - op te hoogte blijven
+      - nieuwsbrief
+      - nieuws
+      - ontwikkelingen
+      - updates
+  
+  - intent: wkkgz_compliance
+    examples: |
+      - voldoe je met een SoloPartners abonnement aan de wkkgz
+      - voldoet een SoloPartners abonnement aan de wkkgz
+      - voldoet mijn SoloPartners abonnement aan de wkkgz
+      - voldoe ik aan de wkkgz
+      - voldoet mijn abonnement aan de wkkgz
+      - voldoet mijn lidmaatschap aan de wkkgz
+      - ben ik wkkgz compliant
+      - voldoe ik aan de wkkgz met mijn abonnement
+      - is mijn abonnement wkkgz compliant
+      - is mijn lidmaatschap wkkgz compliant
+      - ben ik met mijn abonnement wkkgz compliant
+      - ben ik met mijn lidmaatschap wkkgz compliant
+      - wkkgz compliant
+      - wkkgz
+  
+  - intent: sign_up
+    examples: |
+      - hoe meld ik me aan bij solopartners
+      - hoe kan ik me aanmelden bij solopartners
+      - hoe schrijf ik me in bij solopartners
+      - hoe kan ik me inschrijven
+      - hoe meld ik me aan
+      - hoe kan ik lid worden
+      - ik wil me aanmelden
+      - ik wil me inschrijven
+      - ik wil registreren
+      - ik wil aanmelden
+      - ik wil een account
+      - ik wil lid worden
+      - ik wil inschrijven
+      - wat zijn de stappen om me aan te melden
+      - wat zijn de stappen om in te schrijven
+      - wat moet ik doen om me aan te melden
+      - wat moet ik doen om in te schrijven
+      - wat moet ik doen om te registreren
+      - aanmelden
+      - inschrijven
+      - registreren
+      - aanmelding
+      - inschrijving
+      - registratie
+  
+  - intent: set_start_date
+    examples: |
+      - kan ik een startdatum instellen voor mijn lidmaatschap
+      - kan ik een start datum kiezen
+      - is het mogelijk om een startdatum in te stellen voor mijn lidmaatschap
+      - kan ik een startdatum kiezen voor mijn lidmaatschap
+      - is de startdatum flexibel
+      - is het mogelijk om de startdatum te kiezen
+      - is het mogelijk om een ingangsdatum te kiezen
+      - kan ik een ingangsdatum instellen
+      - kan ik een begin datum instellen
+      - is het een optie om een begin datum te kiezen
+      - is het een optie om een startdatum te kiezen
+      - ik wil een startdatum instellen
+      - ik wil een startdatum kiezen
+      - ik wil een ingangsdatum instellen
+      - ik wil een begin datum instellen
+      - ik wil een begin datum kiezen
+      - startdatum
+      - start datum
+      - begin datum
+      - begin datum instellen
+      - startdatum instellen
+      - startdatum kiezen
+      - ingangsdatum
+      - ingangsdatum instellen
+      - ingang datum
+  
+  - intent: no_confirmation_email
+    examples: |
+      - ik heb mij aangemeld maar ontvang geen bevestigingsmail
+      - ik krijg geen bevestigingsmail na aanmelding
+      - ik ontvang geen bevestigingsmail na mijn aanmelding
+      - ik heb geen bevestigingsmail ontvangen na mijn aanmelding
+      - ik heb geen bevestigingsmail ontvangen na inschrijving
+      - ik krijg geen bevestigingsmail na inschrijving
+      - ik heb geen mail ontvangen
+      - ik heb geen bevestigingsmail ontvangen
+      - ik krijg geen mail
+      - ik ontvang geen mail
+      - ik heb geen bevestiging ontvangen
+      - ik krijg geen bevestiging
+      - ik heb geen mail ontvangen
+      - mijn bestiging ontbreekt
+      - geen bevestigingsmail
+      - bevestigingsmail
+      - waar blijft mijn bevestigingsmail
+      - waar blijft mijn bevestiging
+      - waar blijft mijn mail
+      - geen mail
+      - geen bevestiging
+  
+  - intent: post_sign_up
+    examples: |
+      - wat gebeurt er na mijn aanmelding
+      - wat gebeurt er nadat ik me heb aangemeld
+      - wat gebeurt er na mijn inschrijving
+      - wat gebeurt er nadat ik me heb ingeschreven
+      - krijg ik een mail na mijn aanmelding
+      - krijg ik een mail na mijn inschrijving
+      - ik heb me aangemeld, wat nu
+      - ik heb me ingeschreven, wat nu
+      - na aanmelding
+      - na inschrijving
+      - na registratie
+      - na aanmelden
+      - na inschrijven
+      - na registreren
+  
+  - intent: annual_renewal
+    examples: |
+      - moet ik mij ieder jaar opnieuw aanmelden
+      - moet ik elk jaar opnieuw aanmelden
+      - moet ik jaarlijks opnieuw aanmelden
+      - moet ik elk jaar mijn lidmaatschap verlengen
+      - moet ik elk jaar opnieuw inschrijven
+      - wat gebert er elk jaar
+      - wat gebeurt er aan het einde van het jaar
+      - wordt mijn lidmaatschap elk jaar verlengd
+      - wordt mijn lidmaatschap automatisch verlengd
+      - automatische verlenging
+      - jaarlijkse verlenging
+      - jaarlijks verlengen
+      - jaarlijkse vernieuwing
+      - jaarlijks vernieuwen
+      - verlengen
+      - vernieuwen
+      - elk jaar
+      - ieder jaar
+      - jaarlijks
+      - nieuw jaar
+      - nieuwe jaar
+      - volgend jaar
+  
+  - intent: free_vog
+    examples: |
+      - kan ik bij solopartners een gratis vog aanvragen
+      - is een gratis vog mogelijk bij solopartners
+      - biedt solopartners een gratis vog aan
+      - gratis vog
+      - verklaring omtrent gedrag
+      - kan ik een vog aanvragen met een soloplus abonnement
+      - kan ik een vog aanvragen met een solocompleet abonnement
+      - kan ik bij solopartners een gratis vog aanvragen
+      - kan ik een gratis vog aanvragen
+      - is een vog mogelijk met een soloplus abonnement
+      - is een vog mogelijk met een solocompleet abonnement
+      - kan ik een vog krijgen met soloplus
+      - kan ik een vog krijgen met solocompleet
+      - vog aanvragen
+      - is een vog gratis
+      - moet ik betalen voor een vog
+      - hoeveel kost een vog
+      - wat kost een vog
+      - wordt een vog vergoed
+      - vog vergoeding
+      - bij welk abonnement krijg ik een gratis vog
+      - bij welk abonnement is een vog inbegrepen
+      - bij welk abonnement wordt een vog aangeboden
+      - bij welk abonnement is een vog gratis
+      - bij welk abonnement wordt een vog vergoed
+  
+  - intent: upgrade_downgrade
+    examples: |
+      - kan ik mijn lidmaatschap upgraden of downgraden
+      - is het mogelijk om mijn lidmaatschap te upgraden of downgraden
+      - kan ik mijn lidmaatschap wijzigen
+      - kan ik mijn abbonnement veranderen
+      - kan ik mijn abonnement aanpassen
+      - kan ik wisselen van abonnement
+      - wanneer kan ik mijn abonnement wijzigen
+      - wanneer kan ik mijn lidmaatschap wijzigen
+      - wat gebert er als ik mijn abonnement wijzig
+      - wat gebeurt er als ik mijn lidmaatschap wijzig
+      - ik wil mijn abonnement wijzigen
+      - ik wil mijn lidmaatschap wijzigen
+      - ik wil mijn abonnement aanpassen
+      - ik wil mijn lidmaatschap aanpassen
+      - kan ik mijn abonnement verhogen
+      - kan ik mijn abonnement verlagen
+      - kan ik mijn abonnement upgraden
+      - kan ik mijn abonnement downgraden
+      - kan ik mijn lidmaatschap aanpassen
+      - upgraden
+      - downgraden
+  
+  - intent: second_vog
+    examples: |
+      - ik heb een tweede vogaanvraag binnen hetzelfde jaar. Wat nu
+      - wat moet ik doen bij een tweede vogaanvraag binnen hetzelfde jaar
+      - hoe werkt een tweede vogaanvraag binnen hetzelfde jaar
+      - wat moet ik doen als ik een tweede vog wil aanvragen
+      - wat moet ik doen als ik een tweede vog nodig heb
+      - ik wil een tweede vog
+      - ik wil een extra vog
+      - moet ik betalen voor een tweede vog
+      - wat kost een tweede vog
+      - wat moet ik betalen voor een extra vog
+      - wordt een tweede vog vergoed
+      - tweede vogaanvraag
+      - tweede vog aanvraag
+      - tweede vog
+  
+  - intent: automatic_debit
+    examples: |
+      - werkt solopartners met een automatische incasso
+      - gebruikt solopartners automatische incasso
+      - is automatische incasso mogelijk bij solopartners
+      - kan ik automatich betalen
+      - ik wil automatische incasso instellen
+      - ik wil automatisch betalen instellen
+      - kan ik automatisch incasseren
+      - werken jullie met automatische incasso
+      - automatische incasso
+      - automatisch betalen
+      - automatisch incasseren
+  
+  - intent: invoice
+    examples: |
+      - waar vind ik de factuur van solopartners
+      - waar kan ik mijn factuur vinden
+      - hoe kan ik mijn factuur bekijken
+      - hoe bekijk ik mijn factuur
+      - hoe bekijk ik mijn rekening
+      - ik wil mijn factuur zien
+      - ik wil mijn rekening zien
+      - kan ik facturen downloaden
+      - kan ik mijn laatste factuur downloaden
+      - is er een overzicht van mijn facturen
+      - is er een overzicht van mijn betalingen
+      - kan ik een kopie van mijn factuur krijgen
+      - ik wil een kopie van mijn factuur aanvragen
+      - kan ik mijn betalingen inzien
+  
+  - intent: installment_payment
+    examples: |
+      - kan ik in termijnen betalen
+      - is termijnbetaling mogelijk
+      - kan ik mijn betaling in termijnen doen
+      - termijnbetaling
+      - betalen in termijnen
+      - betaling in termijnen
+      - in termijnen betalen
+      - ik wil in termijnen betalen
+      - ik wil mijn betaling in termijnen doen
+      - kan ik mijn betaling spreiden
+      - kan ik mijn betaling verdelen
+      - is het mogelijk om in termijnen te betalen
+      - zijn er extra kosten als ik in termijnen betaal
+      - zijn er kosten verbonden aan termijnbetaling
+  
+  - intent: my_solo
+    examples: |
+      - wat is mijnsolo
+      - wat houdt mijnsolo in
+      - wat kan ik doen met mijnsolo
+      - wat heb ik aan mijnsolo
+      - waarom mijnsolo
+      - waarom zou ik mijnsolo gebruiken
+      - wat is het voordeel van mijnsolo
+      - wat is het nut van mijnsolo
+      - wat kan ik met mijnsolo
+      - welke voordelen bied mijnsolo
+      - ik snap mijnsolo niet
+      - ik snap niet wat mijnsolo is
+      - ik snap niet wat ik met mijnsolo kan
+      - ik snap niet wat ik aan mijnsolo heb
+      - leg uit wat mijnsolo is
+      - leg uit wat ik met mijnsolo kan
+      - leg uit van ik kan met mijnsolo
+      - wil je mij mijnsolo uitleggen
+      - kun je mij mijnsolo uitleggen
+      - ik wil uitleg over mijnsolo
+      - is er een uitleg over mijnsolo
+  
+  - intent: no_login_details
+    examples: |
+      - ik heb geen inloggegevens van mijnsolo
+      - ik heb geen inloggegevens ontvangen
+      - ik kan niet inloggen op mijnsolo
+      - waarom kan ik niet in mijn mijnsolo
+      - ik kan niet in mijnsolo
+      - mijnsolo werkt niet
+      - geen inloggegevens
+      - ik kan niet inloggen
+      - ik kan niet in mijnsolo
+      - waarom kan ik niet inloggen
+      - waarom ontvang ik geen inloggegevens
+      - ik ontvang geen inloggegevens
+      - waar blijven mijn inloggegevens
+      - stuur mij mijn inloggegevens
+      - ik wil mijn inloggegevens hebben
+  
+  - intent: membership_certificate
+    examples: |
+      - waar vind ik het bewijs van lidmaatschap certificaat
+      - waar kan ik mijn lidmaatschapsbewijs vinden
+      - hoe kan ik mijn lidmaatschapsbewijs bekijken
+      - hoe bekijk ik mijn lidmaatschapsbewijs
+      - ik wil mijn lidmaatschapsbewijs zien
+      - ik wil mijn lidmaatschapsbewijs downloaden
+      - kan ik mijn lidmaatschapsbewijs downloaden
+      - kan ik mijn lidmaatschapsbewijs vinden
+      - waar kan ik mijn lidmaatschapsbewijs downloaden
+      - waar kan ik mijn lidmaatschapsbewijs vinden
+      - ik wil mijn lidmaatschap certificaat
+      - ik wil mijn lidmaatschap certificaat downloaden
+      - waar staat mijn lidmaatschap certificaat
+      - waar kan ik mijn lidmaatschap certificaat vinden
+  
+  - intent: update_details
+    examples: |
+      - waar kan ik mijn adresgegevens wijzigen
+      - waar kan ik mijn adres aanpassen
+      - waar kan ik mijn gegevens aanpassen
+      - ik wil mijn gegevens wijzigen
+      - ik wil mijn adresgegevens aanpassen
+      - ik wil mijn adres wijzigen
+      - mijn adres is veranderd
+      - mijn gegevens zijn veranderd
+      - ik heb een nieuw adres
+      - ik heb een nieuw telefoonnummer
+      - hoe kan ik mijn gegevens wijzigen
+      - hoe kan ik mijn adresgegevens aanpassen
+      - gegevens wijzigen
+      - adresgegevens wijzigen
+      - gegevens aanpassen
+  
+  - intent: cancel_membership
+    examples: |
+      - hoe kan ik mijn lidmaatschap beëindigen
+      - ik wil mijn lidmaatschap beëindigen
+      - hoe beëindig ik mijn lidmaatschap
+      - hoe zeg ik mijn lidmaatschap op
+      - hoe kan ik mijn lidmaatschap opzeggen
+      - lidmaatschap beëindigen
+      - hoe kan ik mijn abonnement beëindigen
+      - kan ik stoppen met mijn lidmaatschap
+      - kan ik stoppen met mijn abonnement
+      - ik wil mijn lidmaatschap opzeggen
+      - ik wil mijn abonnement stop zetten
+      - wat is het opzegtermijn
+      - zijn er kosten verbonden aan het opzeggen van mijn lidmaatschap
+      - zijn er kosten verbonden aan het opzeggen van mijn abonnement
+      - lidmaatschap opzeggen
+      - ik wil mijn lidmaatschap annuleren
+      - ik wil mijn abonnement annuleren
+      - waar kan ik mijn lidmaatschap stop zetten
+      - waar kan ik mijn abonnement stop zetten
+      - waar kan ik mijn lidmaatschap annuleren
+      - waar kan ik mijn abonnement opzeggen
+      - ik wil mijn lidmaatschap verwijderen
+      - ik wil mijn account laten verwijderen
+      - lidmaatschap annuleren
+      - verwijderen
+      - beëindigen
+      - opzeggen
+  
+  - intent: best_complaints_portal
+    examples: |
+      - welk klachtenportaal voor de zorg is het beste
+      - wat is het beste klachtenportaal voor de zorg
+      - welk klachtenportaal moet ik gebruiken
+      - wat is het beste klachtenportaal
+      - welk klachtenportaal wordt aangeraden
+      - welk klachtenportaal is het meest geschikt
+      - moet ik beschikken over een externe klachtenregeling
+      - bied solopartners klachtenregeling
+      - klachtenregeling
+      - klachtenportaal
+      - klachten
+  
+  - intent: vog_required
+    examples: |
+      - heb ik als zorgzzper een vog nodig
+      - is een vog verplicht voor zorgzzpers
+      - heb ik een vog nodig als zzper in de zorg
+      - wat gebert er als ik geen vog heb
+      - ben ik verplicht een vog aan te vragen
+      - ben ik verplicht een vog te hebben
+      - moet ik een vog hebben
+      - moet ik in bezit zijn van een vog
+      - klopt het dat ik een vog nodig heb
+      - vog verplicht
+      - vog nodig
+      - verklaring omtrent gedrag nodig
+      - verklaring omtrent gedrad verplicht
+  
+  - intent: wtza_vs_wkkgz
+    examples: |
+      - wat is het verschil tussen de wtza en de wkkgz
+      - wat zijn de verschillen tussen de wtza en de wkkgz
+      - hoe verschillen de wtza en de wkkgz
+      - wat is er anders aan de wtza en de wkkgz
+      - leg uit wat de wtza en de wkkgz zijn
+      - leg het verschil tussen de wtza en de wkkgz uit
+      - is er een verschil tussen de wtza en de wkkgz
+      - leg de verschillen tussen de wtza en de wkkgz uit
+      - wtza vs wkkgz
+      - wtza en wkkgz
+      - wtza en wkkgz verschillen
+  
+  - intent: wtza_subscription
+    examples: |
+      - kan ik een abonnement nemen op de Wkkgz
+      - is een wkkgz abonnement mogelijk
+      - kan ik me abonneren op de wkkgz
+      - is er een wkkgz lidmaatschap
+      - is er een wkkgz abonnement
+      - wat moet ik doen met de wkkgz
+      - moet ik iets doen voor de wkkgz
+      - kunnen jullie mij helpen met de wkkgz
+      - kun je mij helpen met de wkkgz
+      - abonnement op wkkgz
+      - wkkgzabonnement
+      - wkkgz abonnement
+      - wkkgz abonneren
+  
+  - intent: wtza_info
+    examples: |
+      - wat is de wtza
+      - wat houdt de wtza in
+      - wat betekent de wtza
+      - wat is de wet toetreding zorgaanbieders
+      - wat houdt wtza in
+      - wat houdt de wet toetreding zorgaanbieders in
+      - wat is wtza
+      - wat is de wet toetreding zorgaanbieders
+      - leg de wtza uit
+      - leg uit wat wtza is
+      - leg de wet toetreding zorgaanbieders uit
+      - wtza uitleg
+      - wet toetreding zorgaanbieders uitleg
+      - ben ik verplicht mij te melden bij het cibg
+      - ben ik verplicht mij te melden bij het ministerie van volksgezonheid, welzijn en sport
+      - ben ik verplicht mij te melden bij het ministerie van volksgezonheid
+      - moet ik mij melden bij het cibg
+      - moet ik mij melden bij het ministerie van volksgezonheid, welzijn en sport
+      - moet ik mij melden bij het ministerie van volksgezonheid
+      - wat heeft de wtza met mij te maken
+      - wat betekent de wtza voor mij
+      - wat houdt de wtza in voor mij
+      - moet ik iets doen met de wtza
+      - moet ik iets regelen voor de wtza
+  
+  - intent: wtza_reporting
+    examples: |
+      - moet ik mij melden voor de wtza
+      - moet ik me aanmelden voor de wtza
+      - kan ik checken of ik mij aan moet melden voor de wtza
+      - moet ik me registreren voor de wtza
+      - moet ik me melden voor de wtza
+      - ik wil controleren of ik me moet melden voor de wtza
+      - ik wil weten of ik me moet melden voor de wtza
+      - is aanmelding voor de wtza verplicht
+      - is registratie voor de wtza verplicht
+      - wtza registratie
+      - registratie wtza
+      - melden voor wtza
+      - aanmelden voor wtza
+      - wtza aanmelden
+      - val ik onder de meldplicht
+  
+  - intent: bav_insurance
+    examples: |
+      - is een beroepsaansprakelijkheidsverzekering verplicht voor een zorg zzper
+      - heb ik een beroepsaansprakelijkheidsverzekering nodig als zorg zzper
+      - is een beroepsaansprakelijkheidsverzekering verplicht
+      - beroepsaansprakelijkheidsverzekering verplicht
+      - beroepsaansprakelijkheidsverzekering nodig
+      - is een bav verplicht voor een zorg zzper
+      - heb ik een bav nodig als zorg zzper
+      - loop ik risico zonder bav
+      - risico zonder bav
+      - welke risicos loop ik zonder bav
+      - is het verstandig om een bav te nemen
+      - zou ik een bav moeten nemen
+      - zal ik een bav afsluiten
+      - is een bav verplicht
+      - bav verplicht
+      - bav nodig
+  
+  - intent: insurance_needed
+    examples: |
+      - welke verzekering heb ik nodig als zzper in de zorg
+      - welke verzekeringen zijn nodig voor een zorg zzper
+      - welke verzekering moet ik hebben als zzper in de zorg
+      - verzekeringen nodig
+      - verzekeringen vereist
+      - verzekeringen verplicht
+      - moet ik verzekerd zijn
+      - is het verstandig om verzekerd te zijn
+      - moet ik verzekerd zijn als zzper in de zorg
+      - zal ik mij verzekeren
+      - is het nodig om verzekerd te zijn
+
+  - intent: cheapest_subscription
+    examples: |
+      - wat is het goedkoopste abonnement
+      - welk abonnement is het goedkoopste
+      - wat is de goedkoopste optie
+      - welk abonnement is het voordeligst
+      - wat is de voordeligste optie
+      - wat is de laagste prijs
+      - wat kost het minste
+      - wat is de laagste prijs voor een abonnement
+      - wat kost het minste voor een abonnement
+      - goedkoopste abonnement
+      - voordeligste abonnement
+      - is er een gratis optie
+      - is er een gratis abonnement
+      - is er een gratis lidmaatschap
+
+  - intent: choice_help
+    examples: |
+      - ik weet niet welk abonnement ik moet kiezen
+      - welk abonnement past bij mij
+      - welk abonnement is geschikt voor mij
+      - welk abonnement past bij mijn situatie
+      - hoe kies ik het juiste abonnement
+      - hoe kies ik het juiste lidmaatschap
+      - wat moet ik weten om het juiste abonnement te kiezen
+      - wat moet ik doen om het juiste lidmaatschap te kiezen
+      - ik zou graag hulp willen bij het kiezen van een abonnement
+      - ik zoek hulp bij mijn keuze
+      - kun je mij helpen de juiste keuze te maken
+      - kunt u mij helpen met het maken van mijn keuze
+  
+  - intent: best_option
+    examples: |
+      - wat is de beste optie
+      - wat is het beste abonnement
+      - wat is het beste lidmaatschap
+      - welk abonnement is het meest uitgebreid
+      - wat is het duurste abonnement
+      - wat is het meest uitgebreide abonnement
+      - wat is het meest uitgebreide lidmaatschap
+      - welk lidmaatschap is het meest uitgebreid
+      - hoe krijg ik de meeste voordelen
+      - welke optie biedt de meeste voordelen
+      - welke optie is het meest voordelig
+      - wat is de optie met de meeste voordelen
+      - meeste voordelen
+      - duurste abonnement
+      - duurste lidmaatschap
+      - meest uitgebreide abonnement
+  
+  - intent: portfolio
+    examples: |
+      - hoe krijg ik toegang tot mijn portfolio
+      - hoe kan ik mijn portfolio bekijken
+      - wat moet ik doen om een online portfolio te krijgen
+      - hoe krijg ik een online portfolio
+      - hoe kan ik mijn portfolio maken
+      - waar staat mijn portfolio
+      - waar kan ik mijn portfolio vinden
+      - bij welk abonnement krijg ik een portfolio
+      - bij welk abonnement krijg ik toegang tot mijn portfolio
+      - bij welk lidmaatschap hoort een portfolio
+      - bij welk lidmaatschap krijg ik een portfolio
+      - portfolio
+      - online portfolio

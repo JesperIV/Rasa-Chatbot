@@ -1,0 +1,80 @@
+/* styling for 'marked' so markdown can be used in responses */
+    .message-text strong {
+        font-weight: bold;
+    }
+
+    .message-text em {
+        font-style: italic;
+    }
+
+    .message-text del {
+        text-decoration: line-through;
+    }
+
+    .message-text a {
+        color: var(--primary-color);
+        text-decoration: underline;
+        transition: color 0.1s ease-in-out;
+    }
+
+    .message-text a:hover {
+        color: var(--secondary-color);
+    }
+
+    .message-text img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .message-text blockquote {
+        border-left: 4px solid var(--secondary-color);
+        display: flex;
+        max-width: 100%;
+        padding-left: 10px;
+        margin: 5px 0;
+        margin-inline-start: 10px;
+        margin-inline-end: 10px;
+    }
+
+    .message-text blockquote p {
+        filter: brightness(1.4);
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .message-text table {
+        border-collapse: collapse;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        width: auto;
+        max-width: 100%;
+        margin-bottom: 4px;
+        table-layout: auto;
+    }
+
+    .message-text th,
+    .message-text td {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 6px 10px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .message-text th {
+      background-color: #ececef;
+      font-weight: bold;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .message-text tr:nth-child(even) {
+      background-color: #ffffffa8;
+    }
+
+    .message-text tr:nth-child(odd) {
+      background-color: #ffffffe7;
+    }
+
+    .message-text td:first-child,
+    .message-text th:first-child {
+      width: 1%;
+      white-space: nowrap;
+    }

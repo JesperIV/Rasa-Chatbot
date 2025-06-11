@@ -1,0 +1,118 @@
+.admin-panel {
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+b {
+    font-weight: bold;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.exchange-table {
+    border-collapse: collapse;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    background-color: lightgray;
+    flex: 1 1 0;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.exchange-table th {
+    font-weight: bold;
+}
+
+.exchange-table th,
+.exchange-table td {
+    padding: 0.8rem 1rem;
+    border: 1px solid darkgray;
+    border-bottom: 1px solid black;
+    text-align: left;
+    vertical-align: top;
+}
+
+.exchange-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user_input-row {
+    overflow-wrap: anywhere;
+}
+
+.small-field {
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.badge.low {
+    color: red;
+    background-color: lightpink;
+}
+
+.badge.medium {
+    color: darkorange;
+    background-color: palegoldenrod;
+}
+
+.badge.high {
+    color: green;
+    background-color: lightgreen;
+}
+
+.feedback {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.feedback {
+    background-color: gray;
+    opacity: 0.4;
+}
+
+.feedback.Positive {
+    color: green;
+    background-color: lightgreen;
+    opacity: 1;
+}
+
+.feedback.Negative {
+    color: red;
+    background-color: lightpink;
+    opacity: 1;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.4rem;
+    border-radius: 0 10px 0 0;
+    background-color: rgb(240, 240, 240);
+}
+
+.filters input, .filters select {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}

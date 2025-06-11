@@ -1,0 +1,110 @@
+.messages {
+    flex-grow: 1;  /* Allows messages to take up available space */
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+}
+
+.feedback-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+    gap: 5px;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.35);
+    user-select: none;  /* Prevents text selection */
+    -webkit-user-select: none;  /* Safari support */
+    -moz-user-select: none; /* Firefox support */
+    -ms-user-select: none;  /* Older IE support */
+}
+
+.feedback-text {
+    margin: 0;
+    color: var(--secondary-text-color);
+    font-size: 0.8em;
+    margin-left: 3px;
+}
+
+.feedback-btn {
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+}
+
+.feedback-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.selected-positive {
+    background: lightgreen !important;
+}
+
+.selected-negative {
+    background: lightcoral !important;
+}
+
+/* Styles depending on message sender */
+.message-text { /* Universal for messages */
+    color: var(--primary-text-color);
+    text-align: left;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow: hidden;   /* So no scrollbar appears within message bubble */
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline-block;
+    min-width: fit-content;
+}
+
+.message-text span {
+    display: grid;
+}
+
+.message-time {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--secondary-text-color);
+    text-align: right;
+    margin-top: 2px;
+    padding-left: 1px;
+    user-select: none;  /* Prevents text selection */
+    -webkit-user-select: none;  /* Safari support */
+    -moz-user-select: none; /* Firefox support */
+    -ms-user-select: none;  /* Older IE support */
+}
+
+.user { /* For messages sent by user */
+    align-self: flex-end;
+    text-align: left;
+    background: var(--user-message-color);
+    margin: 5px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    display: flex;
+}
+
+.bot {  /* For responses sent by bot */
+    background: var(--bot-message-color);
+    margin: 5px;
+    margin-right: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.bot.error{
+    border: 2px solid red !important;
+    background: lightcoral !important;
+}
