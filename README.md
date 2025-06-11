@@ -1,3 +1,7 @@
+# -------------------PORTFOLIO DISCLAIMER-------------------
+This project was made as a final project an associate degree in informatics at the Avans University of Applied Science.
+It was made with certain school mandated requirements in mind. It may differ from this students regular architectures or design.
+
 # Rasa Open Source Chatbot
 
 ## Overview
